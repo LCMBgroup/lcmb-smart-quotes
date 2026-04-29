@@ -1,7 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
-  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#07182f"/><stop offset="1" stop-color="#0e4d92"/></linearGradient></defs>
-  <rect width="900" height="600" fill="url(#g)"/>
-  <rect x="55" y="55" width="790" height="490" rx="30" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.35)" stroke-width="3"/>
-  <text x="450" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800" fill="#fff">Solar + Battery</text>
-  <text x="450" y="335" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#d6e6fb">Replace with LCMB project photo</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081a33"/><stop offset="1" stop-color="#135aa3"/></linearGradient>
+    <pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0v60" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect width="1200" height="800" fill="url(#p)"/>
+  <circle cx="1010" cy="120" r="260" fill="rgba(255,255,255,.08)"/>
+  <circle cx="150" cy="720" r="230" fill="rgba(255,255,255,.07)"/>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="600" y="365" font-size="54" font-weight="800" letter-spacing="4">LCMB GROUP</text>
+    <text x="600" y="425" font-size="24" opacity=".86">LCMB project photo 1</text>
+    <text x="600" y="470" font-size="18" opacity=".68">Replace this with solar, battery, switchboard or air conditioning job photos.</text>
+  </g>
 </svg>

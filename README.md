@@ -1,23 +1,47 @@
-# LCMB Smart Quotes - Professional V2
+# LCMB Smart Quotes - Professional V6
 
-This is the professional V2 GitHub Pages quote system for LCMB Group.
+This repository hosts LCMB Group's customer-facing quote and smart selector pages.
 
-## Main files
+## Main pages
 
-- `index.html` - internal landing page
-- `quote-generator.html` - creates quote HTML pages in your browser
-- `quotes/example-quote.html` - polished demo quote
-- `assets/site.css` - professional styling
-- `assets/job-photos/` - upload real project photos here
+- `index.html` - homepage for the quote system
+- `smart-selector.html` - interactive customer system selector
+- `quote-generator.html` - manual HTML quote page generator
+- `quotes/sm8-11863-options-demo.html` - example options proposal
 
-## Workflow
+## V6 purpose
 
-1. Create official quote in ServiceM8/GHL.
-2. Open `quote-generator.html`.
-3. Paste the customer-facing details.
-4. Preview.
-5. Download the quote HTML.
-6. Upload it into the `/quotes` folder.
-7. Send the published GitHub Pages URL to the client.
+V6 adds a modern interactive lead pathway before the formal proposal stage.
 
-Do not use GitHub as the official acceptance record. Use ServiceM8 or GHL for official acceptance.
+Customer journey:
+
+1. Customer chooses ducted, split system, solar, battery or combined package.
+2. Customer answers simple property questions.
+3. Customer selects preferences and upgrades.
+4. Page gives an indicative range and recommended direction.
+5. Customer requests Luke, Ash or Projects team for a site inspection.
+6. LCMB confirms and prepares the official ServiceM8/GHL quote.
+
+## Important
+
+GitHub Pages is public. Do not publish sensitive customer data.
+
+Use:
+
+- first name
+- suburb
+- quote/job number
+- scope
+- public-facing pricing
+
+Do not use:
+
+- full customer address
+- phone/email on public page
+- bank details
+- payment links unless intentional
+- internal notes
+- cost price
+- margin
+
+ServiceM8/GHL remains the official quote, acceptance and payment system.

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>LCMB Smart Estimate - Comfort, Solar and Battery</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="LCMB Group smart system selector for ducted air conditioning, split systems, solar and battery options.">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="lcmb-app-page">
+  <header class="app-topbar">
+    <a class="app-logo" href="index.html" aria-label="LCMB Group home"><img src="assets/lcmb-logo-main.png" alt="LCMB Group"></a>
+    <a class="app-phone" href="tel:+61447563718" aria-label="Call LCMB Group">Call</a>
+    <a class="app-quote-btn" href="#instant-estimate">Get instant estimate</a>
+  </header>
+
+  <main id="instant-estimate" class="app-wrap">
+    <section class="app-hero-card">
+      <div class="app-hero-copy">
+        <span class="app-kicker">LCMB smart selector</span>
+        <h1>Build your comfort, solar or battery pathway in a few clicks.</h1>
+        <p>Answer simple questions, choose your preferred options and get an indicative range before booking a site inspection with LCMB Group.</p>
+        <div class="app-proof-row">
+          <span>Gold Coast and Brisbane</span>
+          <span>Electrical, AC, solar and battery</span>
+          <span>10 year workmanship focus</span>
+        </div>
+      </div>
+      <div class="app-hero-photo" style="background-image:url('assets/job-photos/hero-solar-battery-team.jpg')"></div>
+    </section>
+
+    <section class="app-panel app-status-panel" aria-label="Progress">
+      <div class="app-progress-top">
+        <span id="stepLabel">Step 1 of 6</span>
+        <strong id="stepTitle">Choose your pathway</strong>
+      </div>
+      <div class="app-progress"><span id="progressFill"></span></div>
+      <div class="app-mini-estimate">
+        <span>Indicative range</span>
+        <strong id="miniEstimate">Choose a pathway</strong>
+        <small>Final pricing is confirmed after site inspection.</small>
+      </div>
+    </section>
+
+    <form id="lcmbSmartForm" class="app-flow" onsubmit="return false;">
+      <section class="app-step active" data-step="1">
+        <div class="app-panel">
+          <span class="app-kicker">Start here</span>
+          <h2>What would you like help with?</h2>
+          <p class="app-muted">Choose the closest option. If you are not sure, select the combined option or choose "help me choose".</p>
+          <div class="path-grid" id="pathGrid">
+            <button type="button" class="path-card" data-path="ducted" data-label="Ducted air conditioning"><span>Ducted air conditioning</span><small>Whole-home comfort, zoning and premium controls.</small></button>
+            <button type="button" class="path-card" data-path="split" data-label="Split system installation"><span>Split system installation</span><small>Bedrooms, living areas, home offices and smaller zones.</small></button>
+            <button type="button" class="path-card" data-path="solar" data-label="Solar only"><span>Solar only</span><small>Lower daytime electricity costs with a solar system.</small></button>
+            <button type="button" class="path-card" data-path="solar-battery" data-label="Solar and battery"><span>Solar and battery</span><small>Generate, store and use more of your own energy.</small></button>
+            <button type="button" class="path-card" data-path="battery" data-label="Battery only"><span>Battery only</span><small>Add storage to an existing or planned solar system.</small></button>
+            <button type="button" class="path-card" data-path="ducted-solar-battery" data-label="Ducted, solar and battery"><span>Ducted + solar + battery</span><small>Comfort upgrade plus energy and backup discussion.</small></button>
+            <button type="button" class="path-card" data-path="ducted-solar" data-label="Ducted and solar"><span>Ducted + solar</span><small>Improve home comfort and offset running costs.</small></button>
+            <button type="button" class="path-card" data-path="help" data-label="Help me choose"><span>Not sure yet</span><small>LCMB can guide the best pathway for your home.</small></button>
+          </div>
+          <div class="app-actions"><button type="button" class="app-next">Next</button></div>
+        </div>
+      </section>
+
+      <section class="app-step" data-step="2">
+        <div class="app-panel">
+          <span class="app-kicker">Property details</span>
+          <h2>Tell us about the home.</h2>
+          <p class="app-muted">This helps estimate system size, access complexity and likely package direction.</p>
+
+          <label class="app-field full"><span>Suburb or property area</span><input id="suburb" type="text" placeholder="e.g. Burleigh Heads, Springfield Lakes, Brisbane" list="suburbList"></label>
+          <datalist id="suburbList">
+            <option value="Burleigh Heads"><option value="Robina"><option value="Broadbeach Waters"><option value="Surfers Paradise"><option value="Southport"><option value="Hope Island"><option value="Springfield Lakes"><option value="Brisbane"><option value="Coomera"><option value="Helensvale"><option value="Nerang"><option value="Palm Beach">
+          </datalist>
+
+          <div class="toggle-row two-col">
+            <button type="button" class="choice-pill selected" data-storey="single">Single storey</button>
+            <button type="button" class="choice-pill" data-storey="double">Double storey</button>
+          </div>
+
+          <div class="counter-grid">
+            <div class="counter-card"><span>Bedrooms</span><div><button type="button" data-counter="beds" data-dir="-1">-</button><strong id="bedsVal">3</strong><button type="button" data-counter="beds" data-dir="1">+</button></div></div>
+            <div class="counter-card"><span>Bathrooms</span><div><button type="button" data-counter="baths" data-dir="-1">-</button><strong id="bathsVal">2</strong><button type="button" data-counter="baths" data-dir="1">+</button></div></div>
+            <div class="counter-card"><span>Living areas</span><div><button type="button" data-counter="living" data-dir="-1">-</button><strong id="livingVal">2</strong><button type="button" data-counter="living" data-dir="1">+</button></div></div>
+          </div>
+
+          <label class="range-card"><span>Approximate home size</span><input id="sqm" type="range" min="70" max="450" step="10" value="180"><strong><span id="sqmVal">180</span> sqm</strong></label>
+
+          <div class="switch-list">
+            <label class="switch-card"><span><strong>Open-plan living</strong><small>Kitchen, dining and lounge flowing into one larger area.</small></span><input type="checkbox" id="openPlan" checked><i></i></label>
+            <label class="switch-card"><span><strong>Large west-facing windows</strong><small>Afternoon sun can increase cooling load.</small></span><input type="checkbox" id="westWindows"><i></i></label>
+            <label class="switch-card"><span><strong>High or raked ceilings</strong><small>Extra volume to cool or heat.</small></span><input type="checkbox" id="highCeilings"><i></i></label>
+            <label class="switch-card"><span><strong>Difficult access</strong><small>Restricted roof space, steep roof, limited access or multi-level work.</small></span><input type="checkbox" id="difficultAccess"><i></i></label>
+          </div>
+
+          <div class="app-actions"><button type="button" class="app-back">Back</button><button type="button" class="app-next">Next</button></div>
+        </div>
+      </section>
+
+      <section class="app-step" data-step="3">
+        <div class="app-panel floor-plan-panel">
+          <span class="app-kicker">Floor plan</span>
+          <h2>Do you have a floor plan?</h2>
+          <p class="app-muted">For now this prototype captures the file name only. In the production GHL build, this will upload the file securely to the customer record.</p>
+          <label class="drop-zone" for="floorPlanFile">
+            <input id="floorPlanFile" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp">
+            <span class="upload-icon">Upload</span>
+            <strong>Drop your floor plan</strong>
+            <small>PDF, photo or screenshot. Optional.</small>
+            <em id="fileName">No file selected</em>
+          </label>
+          <button type="button" class="plain-link" id="skipPlan">I do not have a plan. Use my answers instead.</button>
+          <div class="app-actions"><button type="button" class="app-back">Back</button><button type="button" class="app-next">Next</button></div>
+        </div>
+      </section>
+
+      <section class="app-step" data-step="4">
+        <div class="app-panel">
+          <span class="app-kicker">Preferences</span>
+          <h2>Choose your preferred style.</h2>
+          <p class="app-muted">This helps LCMB decide whether to present a value, recommended or premium package.</p>
+          <div class="package-row" id="packageRow">
+            <button type="button" class="package-card" data-package="value"><span>Value</span><small>Reliable system, sensible budget, fewer upgrades.</small></button>
+            <button type="button" class="package-card selected" data-package="recommended"><span>Recommended</span><small>Best balance of performance, features and price.</small></button>
+            <button type="button" class="package-card" data-package="premium"><span>Premium</span><small>Premium brands, smart controls and stronger backup options.</small></button>
+          </div>
+
+          <div class="brand-block ac-block">
+            <h3>Ducted and split system brand preference</h3>
+            <div class="brand-grid" data-brand-group="acBrand">
+              <button type="button" class="brand-card selected" data-brand="Daikin"><b>Daikin</b><span>LCMB recommended</span><small>Premium performance and proven reliability.</small></button>
+              <button type="button" class="brand-card" data-brand="Mitsubishi Electric"><b>Mitsubishi Electric</b><span>Premium option</span><small>Consistent comfort and strong product reputation.</small></button>
+              <button type="button" class="brand-card" data-brand="Mitsubishi Heavy Industries"><b>Mitsubishi Heavy Industries</b><span>Alternative option</span><small>Useful when the customer prefers this brand.</small></button>
+              <button type="button" class="brand-card" data-brand="Fujitsu"><b>Fujitsu</b><span>Alternative option</span><small>Price and model to confirm.</small></button>
+            </div>
+          </div>
+
+          <div class="brand-block energy-block">
+            <h3>Solar and battery preference</h3>
+            <div class="brand-grid" data-brand-group="energyBrand">
+              <button type="button" class="brand-card selected" data-brand="Jinko panels + FoxESS battery"><b>Jinko + FoxESS</b><span>LCMB example package</span><small>Solar panels with battery storage pathway.</small></button>
+              <button type="button" class="brand-card" data-brand="Sungrow"><b>Sungrow</b><span>Alternative option</span><small>Price and compatibility to confirm.</small></button>
+              <button type="button" class="brand-card" data-brand="Tesla Powerwall"><b>Tesla Powerwall</b><span>Premium battery option</span><small>Premium battery pathway to quote if suitable.</small></button>
+              <button type="button" class="brand-card" data-brand="Premium panels"><b>Premium panels</b><span>Premium solar option</span><small>REC or similar premium panel option to confirm.</small></button>
+            </div>
+          </div>
+
+          <div class="app-actions"><button type="button" class="app-back">Back</button><button type="button" class="app-next">Next</button></div>
+        </div>
+      </section>
+
+      <section class="app-step" data-step="5">
+        <div class="app-panel">
+          <span class="app-kicker">Add-ons</span>
+          <h2>Would you like any of these included?</h2>
+          <p class="app-muted">Some upgrades can be priced now. Others are marked "confirm on site".</p>
+          <div class="addon-list">
+            <label class="addon-card ac-block"><input type="checkbox" id="addAirTouch" data-addon="AirTouch 5 smart zoning"><span><strong>AirTouch 5 smart zoning</strong><small>Room-by-room control and app-based comfort features.</small></span><em>Popular</em></label>
+            <label class="addon-card ac-block"><input type="checkbox" id="addSensors" data-addon="Temperature sensors"><span><strong>Temperature sensors</strong><small>More precise room temperature monitoring.</small></span><em>Per zone</em></label>
+            <label class="addon-card ac-block"><input type="checkbox" id="addDucting" data-addon="R1.5 ducting upgrade"><span><strong>R1.5 ducting upgrade</strong><small>Improved duct insulation and reduced thermal loss.</small></span><em>Recommended</em></label>
+            <label class="addon-card energy-block"><input type="checkbox" id="addBackup" data-addon="Essential circuit backup"><span><strong>Essential circuit backup</strong><small>Discuss backup for lighting, fridge or selected power circuits.</small></span><em>Confirm</em></label>
+            <label class="addon-card energy-block"><input type="checkbox" id="addEV" data-addon="EV charger ready"><span><strong>EV charger option</strong><small>Future-proof the system for electric vehicle charging.</small></span><em>Optional</em></label>
+            <label class="addon-card"><input type="checkbox" id="addSwitchboard" data-addon="Switchboard review"><span><strong>Switchboard review</strong><small>Useful for older homes, solar, battery or AC upgrades.</small></span><em>Check</em></label>
+          </div>
+          <div class="app-actions"><button type="button" class="app-back">Back</button><button type="button" class="app-next">See my estimate</button></div>
+        </div>
+      </section>
+
+      <section class="app-step" data-step="6">
+        <div class="app-panel result-panel">
+          <span class="app-kicker">Your direction</span>
+          <h2>Your LCMB indicative pathway is ready.</h2>
+          <div class="estimate-hero">
+            <div>
+              <span>Indicative range</span>
+              <strong id="estimateRange">$-- to $-- inc GST</strong>
+              <small>Subject to site inspection, final product selection and ServiceM8/GHL quote approval.</small>
+            </div>
+            <button type="button" class="app-quote-btn" id="copySummaryBtn">Copy summary</button>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-card"><h3>Recommended pathway</h3><p id="recommendationText">Complete the selector to generate a recommendation.</p></div>
+            <div class="result-card"><h3>What LCMB will confirm</h3><ul id="confirmList"></ul></div>
+          </div>
+
+          <div class="summary-box"><h3>Customer summary</h3><textarea id="summaryText" readonly></textarea></div>
+
+          <div class="lead-gate">
+            <span class="app-kicker">Almost there</span>
+            <h2>Send this to LCMB or book a site inspection.</h2>
+            <p class="app-muted">Your details are only used by LCMB Group to follow up this request.</p>
+            <div class="lead-grid">
+              <label class="app-field"><span>Your name</span><input id="leadName" type="text" placeholder="Full name"></label>
+              <label class="app-field"><span>Phone</span><input id="leadPhone" type="tel" placeholder="0400 000 000"></label>
+              <label class="app-field full"><span>Email</span><input id="leadEmail" type="email" placeholder="you@example.com"></label>
+            </div>
+            <div class="app-actions stacked-mobile">
+              <a class="app-next mail-link" id="emailSummary" href="mailto:projects@lcmbelectrical.com.au">Email my selection to LCMB</a>
+              <a class="app-back" href="tel:+61447563718">Call LCMB instead</a>
+            </div>
+          </div>
+
+          <h2 class="book-heading">Choose who you would like to speak with.</h2>
+          <div class="team-booking-grid">
+            <article class="team-book-card"><img src="assets/job-photos/solar-battery-van-portrait.jpg" alt="LCMB consultant"><h3>Luke</h3><p>Best for solar, battery and combined energy packages.</p><a id="bookLuke" href="mailto:projects@lcmbelectrical.com.au" class="app-next">Request Luke</a></article>
+            <article class="team-book-card"><img src="assets/job-photos/air-conditioning-outdoor-unit.jpg" alt="LCMB air conditioning team"><h3>Ash</h3><p>Best for ducted air conditioning, split systems and comfort upgrades.</p><a id="bookAsh" href="mailto:office@lcmbelectrical.com.au" class="app-next">Request Ash</a></article>
+            <article class="team-book-card"><img src="assets/job-photos/gold-coast-solar-aerial.jpg" alt="LCMB projects"><h3>Projects team</h3><p>Best for larger scopes, builders, commercial or multi-service packages.</p><a id="bookProjects" href="mailto:projects@lcmbelectrical.com.au" class="app-next">Request projects team</a></article>
+          </div>
+
+          <div class="app-actions"><button type="button" class="app-back">Back</button><a class="app-quote-btn" href="quotes/sm8-11863-options-demo.html">View formal quote demo</a></div>
+        </div>
+      </section>
+    </form>
+
+    <section class="app-panel proof-panel">
+      <span class="app-kicker">Why LCMB Group</span>
+      <h2>Real local installs, real proof, clear next steps.</h2>
+      <div class="proof-grid">
+        <img src="assets/job-photos/gold-coast-solar-aerial.jpg" alt="Gold Coast solar installation">
+        <img src="assets/job-photos/battery-storage-install.jpg" alt="Battery storage installation">
+        <img src="assets/job-photos/ducted-air-conditioning-install.jpg" alt="Ducted air conditioning installation">
+      </div>
+      <div class="review-strip">
+        <p><strong>Google review:</strong> "Professional from start to finish... simplified the jargon, turned up on time, kept me informed throughout the installation and stayed til the job was done."</p>
+        <a href="https://g.page/r/CZhaBKS0euEhEAo/review" target="_blank" rel="noopener">Review LCMB on Google</a>
+        <a href="https://www.instagram.com/reel/DXoFVmDkuk6/?igsh=MWptanprMm9keTl3Nw==" target="_blank" rel="noopener">Watch Instagram reel</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="mobile-bottom-bar" aria-label="Mobile actions">
+    <a href="tel:+61447563718">Call</a>
+    <a href="#instant-estimate">Estimate</a>
+    <a href="mailto:projects@lcmbelectrical.com.au">Email</a>
+  </nav>
+
+<script>
+(function(){
+  const state = {
+    step: 1,
+    path: '', pathLabel: '', storey: 'single', beds: 3, baths: 2, living: 2, sqm: 180,
+    package: 'recommended', acBrand: 'Daikin', energyBrand: 'Jinko panels + FoxESS battery'
+  };
+  const steps = Array.from(document.querySelectorAll('.app-step'));
+  const progressFill = document.getElementById('progressFill');
+  const stepLabel = document.getElementById('stepLabel');
+  const stepTitle = document.getElementById('stepTitle');
+  const miniEstimate = document.getElementById('miniEstimate');
+  const titles = ['Choose your pathway','Tell us about the home','Floor plan or manual answers','Choose package style','Choose add-ons','Estimate and book'];
+  const money = n => '$' + Math.round(n).toLocaleString('en-AU');
+  const isAC = () => ['ducted','split','ducted-solar-battery','ducted-solar','help'].includes(state.path);
+  const isEnergy = () => ['solar','solar-battery','battery','ducted-solar-battery','ducted-solar','help'].includes(state.path);
+
+  function go(step){
+    state.step = Math.max(1, Math.min(6, step));
+    steps.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === state.step));
+    progressFill.style.width = ((state.step - 1) / 5 * 100) + '%';
+    stepLabel.textContent = 'Step ' + state.step + ' of 6';
+    stepTitle.textContent = titles[state.step - 1];
+    updateVisibility();
+    updateEstimate();
+    window.scrollTo({top: document.querySelector('.app-flow').offsetTop - 95, behavior: 'smooth'});
+  }
+
+  function updateVisibility(){
+    document.querySelectorAll('.ac-block').forEach(el => el.classList.toggle('hidden-soft', !isAC()));
+    document.querySelectorAll('.energy-block').forEach(el => el.classList.toggle('hidden-soft', !isEnergy()));
+  }
+
+  function estimate(){
+    let low = 0, high = 0;
+    const complexity = (state.beds - 3) * 1200 + (state.living - 2) * 900 + (state.storey === 'double' ? 2500 : 0) + (document.getElementById('openPlan').checked ? 900 : 0) + (document.getElementById('westWindows').checked ? 1200 : 0) + (document.getElementById('highCeilings').checked ? 1000 : 0) + (document.getElementById('difficultAccess').checked ? 1800 : 0);
+    if (state.path === 'ducted' || state.path === 'ducted-solar' || state.path === 'ducted-solar-battery' || state.path === 'help') { low += 11500 + complexity; high += 18500 + complexity * 1.2; }
+    if (state.path === 'split') { low += 2900 + state.living * 1200; high += 8500 + state.beds * 900; }
+    if (state.path === 'solar' || state.path === 'solar-battery' || state.path === 'ducted-solar' || state.path === 'ducted-solar-battery' || state.path === 'help') { low += 7500; high += 17000; }
+    if (state.path === 'battery' || state.path === 'solar-battery' || state.path === 'ducted-solar-battery' || state.path === 'help') { low += 8500; high += 36000; }
+    if (state.package === 'value') { low *= 0.92; high *= 0.92; }
+    if (state.package === 'premium') { low *= 1.12; high *= 1.28; }
+    if (document.getElementById('addAirTouch').checked) { low += 1400; high += 2200; }
+    if (document.getElementById('addSensors').checked) { low += 400; high += 1200; }
+    if (document.getElementById('addDucting').checked) { low += 700; high += 1600; }
+    if (document.getElementById('addBackup').checked) { low += 1200; high += 4500; }
+    if (document.getElementById('addEV').checked) { low += 1600; high += 3500; }
+    if (document.getElementById('addSwitchboard').checked) { low += 1200; high += 5500; }
+    if (!state.path) return null;
+    return {low: Math.max(2500, low), high: Math.max(5500, high)};
+  }
+
+  function updateEstimate(){
+    const est = estimate();
+    if (!est) { miniEstimate.textContent = 'Choose a pathway'; return; }
+    const range = money(est.low) + ' - ' + money(est.high) + ' inc GST';
+    miniEstimate.textContent = range;
+    const out = document.getElementById('estimateRange');
+    if (out) out.textContent = range;
+    buildSummary();
+  }
+
+  function selectedAddons(){
+    return Array.from(document.querySelectorAll('.addon-card input:checked')).map(i => i.dataset.addon);
+  }
+
+  function buildSummary(){
+    const est = estimate();
+    const suburb = document.getElementById('suburb').value || 'not provided';
+    const file = document.getElementById('floorPlanFile').files[0];
+    const addons = selectedAddons();
+    const pathText = state.pathLabel || 'Not selected';
+    let recommendation = 'LCMB should review the information and confirm the final system design on site.';
+    if (state.path.includes('ducted') || state.path === 'help') recommendation = 'Recommended starting point: whole-home ducted comfort pathway with zoning, ducting and access confirmed by LCMB.';
+    if (state.path === 'split') recommendation = 'Recommended starting point: split system pathway for targeted rooms or living areas.';
+    if (state.path === 'solar') recommendation = 'Recommended starting point: solar system pathway to reduce daytime grid usage.';
+    if (state.path === 'battery') recommendation = 'Recommended starting point: battery storage pathway, with backup circuits and existing solar confirmed on site.';
+    if (state.path === 'solar-battery') recommendation = 'Recommended starting point: solar and battery pathway to improve self-consumption and discuss backup options.';
+    if (state.path === 'ducted-solar-battery') recommendation = 'Recommended starting point: combined ducted, solar and battery pathway for comfort, energy savings and backup discussion.';
+    document.getElementById('recommendationText').textContent = recommendation;
+    const confirm = ['Site access and installation locations','Switchboard condition and compliance requirements','Final product selection and availability','Cable routes, roof space and roof condition','Final ServiceM8/GHL scope and pricing'];
+    document.getElementById('confirmList').innerHTML = confirm.map(x => '<li>' + x + '</li>').join('');
+    const summary = [
+      'LCMB Smart Selector Summary',
+      '',
+      'Selected pathway: ' + pathText,
+      'Suburb / area: ' + suburb,
+      'Storey: ' + state.storey,
+      'Bedrooms: ' + state.beds,
+      'Bathrooms: ' + state.baths,
+      'Living areas: ' + state.living,
+      'Approx home size: ' + state.sqm + ' sqm',
+      'Package style: ' + state.package,
+      'AC brand preference: ' + (isAC() ? state.acBrand : 'Not applicable'),
+      'Energy brand preference: ' + (isEnergy() ? state.energyBrand : 'Not applicable'),
+      'Add-ons: ' + (addons.length ? addons.join(', ') : 'None selected'),
+      'Floor plan file: ' + (file ? file.name : 'Not uploaded'),
+      'Indicative range: ' + (est ? money(est.low) + ' - ' + money(est.high) + ' inc GST' : 'Not calculated'),
+      '',
+      'Important: indicative only. Final system sizing, product selection, compliance and price to be confirmed by LCMB Group after site inspection.'
+    ].join('\n');
+    const summaryText = document.getElementById('summaryText');
+    if (summaryText) summaryText.value = summary;
+    const subject = encodeURIComponent('LCMB smart selector request - ' + pathText);
+    const body = encodeURIComponent(summary + '\n\nName: ' + (document.getElementById('leadName').value || '') + '\nPhone: ' + (document.getElementById('leadPhone').value || '') + '\nEmail: ' + (document.getElementById('leadEmail').value || ''));
+    ['emailSummary','bookLuke','bookAsh','bookProjects'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = (id === 'bookAsh' ? 'mailto:office@lcmbelectrical.com.au' : 'mailto:projects@lcmbelectrical.com.au') + '?subject=' + subject + '&body=' + body;
+    });
+  }
+
+  document.querySelectorAll('.path-card').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.path-card').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected'); state.path = btn.dataset.path; state.pathLabel = btn.dataset.label; updateEstimate(); updateVisibility();
+  }));
+  document.querySelectorAll('.choice-pill').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.choice-pill').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected'); state.storey = btn.dataset.storey; updateEstimate();
+  }));
+  document.querySelectorAll('[data-counter]').forEach(btn => btn.addEventListener('click', () => {
+    const key = btn.dataset.counter; const dir = Number(btn.dataset.dir); state[key] = Math.max(0, Math.min(12, state[key] + dir));
+    document.getElementById(key + 'Val').textContent = state[key]; updateEstimate();
+  }));
+  document.getElementById('sqm').addEventListener('input', e => { state.sqm = Number(e.target.value); document.getElementById('sqmVal').textContent = state.sqm; updateEstimate(); });
+  ['openPlan','westWindows','highCeilings','difficultAccess','addAirTouch','addSensors','addDucting','addBackup','addEV','addSwitchboard'].forEach(id => document.getElementById(id).addEventListener('change', updateEstimate));
+  document.getElementById('suburb').addEventListener('input', updateEstimate);
+  document.getElementById('floorPlanFile').addEventListener('change', e => { document.getElementById('fileName').textContent = e.target.files[0] ? e.target.files[0].name : 'No file selected'; updateEstimate(); });
+  document.getElementById('skipPlan').addEventListener('click', () => go(4));
+  document.querySelectorAll('.package-card').forEach(btn => btn.addEventListener('click', () => { document.querySelectorAll('.package-card').forEach(b => b.classList.remove('selected')); btn.classList.add('selected'); state.package = btn.dataset.package; updateEstimate(); }));
+  document.querySelectorAll('.brand-grid').forEach(group => group.querySelectorAll('.brand-card').forEach(btn => btn.addEventListener('click', () => { group.querySelectorAll('.brand-card').forEach(b => b.classList.remove('selected')); btn.classList.add('selected'); state[group.dataset.brandGroup] = btn.dataset.brand; updateEstimate(); })));
+  document.querySelectorAll('.app-next').forEach(btn => btn.addEventListener('click', (e) => { if (btn.tagName === 'A') return; if (state.step === 1 && !state.path) { alert('Please choose a pathway first.'); return; } go(state.step + 1); }));
+  document.querySelectorAll('.app-back').forEach(btn => btn.addEventListener('click', (e) => { if (btn.tagName === 'A') return; go(state.step - 1); }));
+  ['leadName','leadPhone','leadEmail'].forEach(id => document.getElementById(id).addEventListener('input', buildSummary));
+  document.getElementById('copySummaryBtn').addEventListener('click', async () => { const text = document.getElementById('summaryText').value; try { await navigator.clipboard.writeText(text); alert('Summary copied.'); } catch(e) { document.getElementById('summaryText').select(); } });
+  updateEstimate(); updateVisibility(); go(1);
+})();
+</script>
+</body>
+</html>

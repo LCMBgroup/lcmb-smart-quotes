@@ -1,215 +1,74 @@
-<!doctype html>
-<html lang="en-AU">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>LCMB Smart Estimate Dashboard</title>
-  <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="LCMB Group smart estimate dashboard for ducted air conditioning, split systems, solar, battery and combined home energy upgrades.">
-  <link rel="stylesheet" href="assets/dashboard-v7.css">
-</head>
-<body>
-  <header class="topbar">
-    <a class="topbar__logo" href="index.html" aria-label="LCMB Group home">
-      <img src="assets/lcmb-logo-white.png" alt="LCMB Group">
-      <span class="topbar__brand"><strong>LCMB Group</strong><span>Smart estimate dashboard</span></span>
-    </a>
-    <nav class="topbar__actions" aria-label="Main actions">
-      <a class="topbar__call" href="tel:+61447563718" aria-label="Call LCMB Group">☎</a>
-      <a class="topbar__cta" href="#app" id="startNow">Get instant estimate</a>
-    </nav>
-  </header>
+LCMB Group
+☎
+Get instant estimate
+⚡ V8 dashboard experience
+Build your LCMB package in minutes.
+Choose ducted air, split systems, solar, battery, or a combined package. We’ll guide you through the key questions, show an indicative range, then help you request the right site inspection.
 
-  <main id="app" class="shell">
-    <aside class="rail" aria-label="Estimate progress">
-      <div class="rail__logo"><img src="assets/lcmb-logo-transparent.png" alt="LCMB Group"></div>
-      <span class="kicker">Your journey</span>
-      <div class="journey">
-        <div class="journey__item active"><span>1</span><div><b>Choose pathway</b><small>Ducted, split, solar or battery</small></div></div>
-        <div class="journey__item"><span>2</span><div><b>Property details</b><small>Bedrooms, living, access</small></div></div>
-        <div class="journey__item"><span>3</span><div><b>Floor plan</b><small>Upload or answer manually</small></div></div>
-        <div class="journey__item"><span>4</span><div><b>Options</b><small>Brands, package, add-ons</small></div></div>
-        <div class="journey__item"><span>5</span><div><b>Estimate</b><small>Indicative range</small></div></div>
-        <div class="journey__item"><span>6</span><div><b>Book</b><small>Request site inspection</small></div></div>
-      </div>
-      <div class="rail__mini">
-        <small>Live indicative range</small>
-        <strong id="miniEstimate">Choose a pathway</strong>
-        <p>Final pricing is confirmed after LCMB site inspection and formal ServiceM8/GHL quote.</p>
-      </div>
-    </aside>
+Gold Coast & Brisbane
+10-year workmanship
+Electrical · AC · Solar · Battery
+No final price until LCMB confirms site conditions
+V8 live dashboard
+Your estimate journey
+This screen should look noticeably different from the old form. If you can see this V8 badge, the correct file has loaded.
 
-    <section class="wizard" aria-label="LCMB Smart Selector">
-      <div class="mobile-stepper">
-        <div class="mobile-stepper__bar"><span id="mobileProgress"></span></div>
-        <div class="mobile-stepper__text"><span id="mobileStepText">Step 1 of 6</span><strong id="mobileStepTitle">Choose pathway</strong></div>
-      </div>
+1
+Pathway
+2
+Property
+3
+Floor plan
+4
+Package
+5
+Add-ons
+6
+Estimate
+Step 1 of 6
+Choose your pathway
+What would you like help with?
+Start with the outcome you want. You can choose a single service or a combined comfort and energy package.
 
-      <section class="step active hero" data-step="1">
-        <div class="hero-grid">
-          <div class="hero-card">
-            <div>
-              <span class="kicker">LCMB smart selector</span>
-              <h1>Build your home comfort and energy estimate.</h1>
-              <p>Choose what you are looking for, answer a few simple questions, select your preferred options and get a smart indicative range before booking a site inspection.</p>
-              <div class="btn-row">
-                <a class="btn btn--gold" href="#pathChoice">Choose service below ↓</a>
-                <a class="btn btn--dark" href="tel:+61447563718">Call LCMB</a>
-              </div>
-            </div>
-            <div class="hero-stats">
-              <div class="stat"><strong>AC</strong><span>Ducted and split systems</span></div>
-              <div class="stat"><strong>Solar</strong><span>Solar design and installs</span></div>
-              <div class="stat"><strong>Battery</strong><span>Storage and backup options</span></div>
-            </div>
-          </div>
-          <div class="hero-photo" style="background-image:url('assets/job-photos/hero-solar-battery.webp')">
-            <div class="hero-photo__badge"><b>Gold Coast and Brisbane</b><span>Electrical, air conditioning, solar and battery installs by LCMB Group.</span></div>
-          </div>
-        </div>
+❄️
+Ducted air conditioning
+Whole-home comfort, zoning and modern controls.
 
-        <div id="pathChoice" class="section-card" style="margin-top:22px">
-          <span class="kicker">Step 1</span>
-          <h2>What would you like help with?</h2>
-          <p class="step__intro">Pick the closest option. The next screens will adapt to your selection.</p>
-          <div class="path-grid">
-            <button class="path-card" type="button" data-path="ducted"><span class="path-card__icon">❄</span><b>Ducted air conditioning</b><span>Whole-home comfort, zoning and premium controls.</span><em>Most popular AC</em></button>
-            <button class="path-card" type="button" data-path="split"><span class="path-card__icon">◫</span><b>Split system installation</b><span>Bedrooms, living areas, home offices and targeted cooling.</span><em>Fast install</em></button>
-            <button class="path-card" type="button" data-path="solar"><span class="path-card__icon">☀</span><b>Solar only</b><span>Lower daytime electricity costs with the right solar size.</span><em>Energy savings</em></button>
-            <button class="path-card" type="button" data-path="solar-battery"><span class="path-card__icon">⚡</span><b>Solar + battery</b><span>Generate, store and use more of your own energy.</span><em>Recommended energy</em></button>
-            <button class="path-card" type="button" data-path="battery"><span class="path-card__icon">▣</span><b>Battery only</b><span>Add battery storage to an existing or planned solar system.</span><em>Backup options</em></button>
-            <button class="path-card" type="button" data-path="ducted-solar-battery"><span class="path-card__icon">◆</span><b>Ducted + solar + battery</b><span>A full comfort and energy pathway for larger homes.</span><em>Premium package</em></button>
-            <button class="path-card" type="button" data-path="ducted-solar"><span class="path-card__icon">◇</span><b>Ducted + solar</b><span>Improve home comfort and offset running costs.</span><em>Smart bundle</em></button>
-            <button class="path-card" type="button" data-path="help"><span class="path-card__icon">?</span><b>Not sure yet</b><span>Let LCMB guide you toward the right pathway.</span><em>Help me choose</em></button>
-          </div>
-          <div class="actions"><span></span><div class="btn-row"><button class="btn btn--gold next-step" type="button">Next →</button></div></div>
-        </div>
-      </section>
+🌬️
+Split system installation
+Target bedrooms, offices or living spaces.
 
-      <section class="step" data-step="2">
-        <span class="kicker">Step 2</span>
-        <h2>Tell us about the property.</h2>
-        <p class="step__intro">These details help estimate system size, access complexity and the best product pathway.</p>
-        <div class="form-grid">
-          <div class="field full"><label for="suburb">Property suburb or area</label><input id="suburb" type="text" placeholder="Start typing... e.g. Burleigh Heads, Springfield Lakes, Brisbane" list="suburbList"></div>
-          <datalist id="suburbList"><option value="Burleigh Heads"><option value="Robina"><option value="Broadbeach Waters"><option value="Surfers Paradise"><option value="Southport"><option value="Hope Island"><option value="Springfield Lakes"><option value="Brisbane"><option value="Coomera"><option value="Helensvale"><option value="Nerang"><option value="Palm Beach"><option value="Ipswich"><option value="Logan"></datalist>
-          <div class="field full"><span class="label">Single or double storey?</span><div class="choice-grid"><button class="choice-card selected" type="button" data-storey="single"><i>⌂</i><div><b>Single storey</b><span>One level</span></div></button><button class="choice-card" type="button" data-storey="double"><i>▤</i><div><b>Double storey</b><span>Two or more levels</span></div></button></div></div>
-          <div class="field full"><span class="label">Home layout</span><div class="counter-grid"><div class="counter"><span>Bedrooms</span><div class="counter__control"><button type="button" data-counter="beds" data-dir="-1">−</button><strong id="bedsVal">3</strong><button type="button" data-counter="beds" data-dir="1">+</button></div></div><div class="counter"><span>Bathrooms</span><div class="counter__control"><button type="button" data-counter="baths" data-dir="-1">−</button><strong id="bathsVal">2</strong><button type="button" data-counter="baths" data-dir="1">+</button></div></div><div class="counter"><span>Living areas</span><div class="counter__control"><button type="button" data-counter="living" data-dir="-1">−</button><strong id="livingVal">2</strong><button type="button" data-counter="living" data-dir="1">+</button></div></div></div></div>
-          <div class="field full"><div class="range-card"><div class="range-card__top"><span class="label">Approximate home size</span><strong><span id="sqmVal">180</span> sqm</strong></div><input id="sqm" type="range" min="70" max="450" step="10" value="180"><div style="display:flex;justify-content:space-between;color:var(--muted)"><span>70 sqm</span><span>450 sqm</span></div></div></div>
-          <div class="field full"><span class="label">Any extra load or access factors?</span><div class="switch-grid"><label class="switch-card"><span><b>Open-plan living</b><small>Kitchen, dining and lounge flowing into one larger space.</small></span><span class="switch"><input id="openPlan" type="checkbox" checked><i></i></span></label><label class="switch-card"><span><b>Large west-facing windows</b><small>Afternoon sun can push cooling load higher.</small></span><span class="switch"><input id="westWindows" type="checkbox"><i></i></span></label><label class="switch-card"><span><b>High or raked ceilings</b><small>More air volume to cool or heat.</small></span><span class="switch"><input id="highCeilings" type="checkbox"><i></i></span></label><label class="switch-card"><span><b>Difficult access</b><small>Restricted roof space, steep roof, limited access or multi-level work.</small></span><span class="switch"><input id="difficultAccess" type="checkbox"><i></i></span></label></div></div>
-        </div>
-        <div class="actions"><button class="btn btn--ghost prev-step" type="button">← Back</button><div class="btn-row"><button class="btn btn--gold next-step" type="button">Next →</button></div></div>
-      </section>
+☀️
+Solar only
+Reduce daytime grid usage and electricity bills.
 
-      <section class="step" data-step="3">
-        <span class="kicker">Step 3</span>
-        <h2>Drop your floor plan or continue manually.</h2>
-        <p class="step__intro">A floor plan helps LCMB confirm possible outlet locations, zones, duct runs and equipment locations. This GitHub prototype only records the file name; the production version will use GHL for secure file upload.</p>
-        <label class="drop-card" for="floorPlanFile">
-          <input id="floorPlanFile" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp">
-          <span class="drop-card__icon">⇧</span>
-          <strong>Choose floor plan</strong>
-          <span>PDF, photo or screenshot accepted. Optional at this stage.</span>
-          <em id="floorPlanName">No file selected</em>
-        </label>
-        <div class="btn-row" style="justify-content:center;margin-top:20px"><button id="skipPlan" type="button" class="btn btn--dark">I do not have a plan — use my answers</button></div>
-        <div class="actions"><button class="btn btn--ghost prev-step" type="button">← Back</button><div class="btn-row"><button class="btn btn--gold next-step" type="button">Next →</button></div></div>
-      </section>
+🔋
+Solar + battery
+Store your solar power and improve self-use.
 
-      <section class="step" data-step="4">
-        <span class="kicker">Step 4</span>
-        <h2>Choose your package style and preferred brands.</h2>
-        <p class="step__intro">This helps LCMB decide whether to prepare a value, recommended or premium option.</p>
-        <div class="package-grid">
-          <button class="package-card" type="button" data-package="value"><em>Good</em><b>Value</b><span>Reliable system, sensible inclusions and budget-conscious product direction.</span></button>
-          <button class="package-card selected" type="button" data-package="recommended"><em>Best fit</em><b>Recommended</b><span>Best balance of performance, features, reliability and price.</span></button>
-          <button class="package-card" type="button" data-package="premium"><em>Premium</em><b>Performance</b><span>Premium brands, stronger controls and more future-proof options.</span></button>
-        </div>
+⚡
+Battery only
+Add storage or backup to an existing solar system.
 
-        <div class="section-card ac-dependent" style="margin-top:18px">
-          <span class="kicker">AC brands</span>
-          <h2 style="font-size:34px">Ducted and split system preference</h2>
-          <div class="brand-grid">
-            <button class="brand-card selected" type="button" data-brand-group="acBrand" data-brand="Daikin"><b>Daikin</b><span>LCMB recommended</span><small>Premium performance, strong support and proven reliability.</small></button>
-            <button class="brand-card" type="button" data-brand-group="acBrand" data-brand="Mitsubishi Electric"><b>Mitsubishi Electric</b><span>Premium option</span><small>Great for customers wanting a premium alternative.</small></button>
-            <button class="brand-card" type="button" data-brand-group="acBrand" data-brand="Mitsubishi Heavy Industries"><b>Mitsubishi Heavy Industries</b><span>Alternative option</span><small>Useful where customer preference or product fit suits the job.</small></button>
-            <button class="brand-card" type="button" data-brand-group="acBrand" data-brand="Fujitsu"><b>Fujitsu</b><span>Value alternative</span><small>Model, availability and pricing to confirm.</small></button>
-          </div>
-        </div>
+🏡
+Ducted + solar + battery
+Premium comfort and energy package for the whole home.
 
-        <div class="section-card energy-dependent" style="margin-top:18px">
-          <span class="kicker">Solar and battery</span>
-          <h2 style="font-size:34px">Energy system preference</h2>
-          <div class="brand-grid">
-            <button class="brand-card selected" type="button" data-brand-group="energyBrand" data-brand="Jinko panels + FoxESS battery"><b>Jinko + FoxESS</b><span>LCMB example package</span><small>Solar panels and battery storage pathway similar to the example quote.</small></button>
-            <button class="brand-card" type="button" data-brand-group="energyBrand" data-brand="Sungrow"><b>Sungrow</b><span>Alternative option</span><small>Solar/battery compatibility and pricing to confirm.</small></button>
-            <button class="brand-card" type="button" data-brand-group="energyBrand" data-brand="Tesla Powerwall"><b>Tesla Powerwall</b><span>Premium battery</span><small>Premium battery pathway to quote if suitable.</small></button>
-            <button class="brand-card" type="button" data-brand-group="energyBrand" data-brand="Premium panels"><b>Premium panels</b><span>Premium solar</span><small>REC, AIKO or similar premium panel option to confirm.</small></button>
-          </div>
-        </div>
-        <div class="actions"><button class="btn btn--ghost prev-step" type="button">← Back</button><div class="btn-row"><button class="btn btn--gold next-step" type="button">Next →</button></div></div>
-      </section>
+Popular package
+← Back
+Next →
+Ducted air conditioning
+$10k – $17k
+Indicative only. Final quote confirmed after LCMB reviews site conditions, product selection and scope.
 
-      <section class="step" data-step="5">
-        <span class="kicker">Step 5</span>
-        <h2>Select add-ons and view your estimate dashboard.</h2>
-        <p class="step__intro">Add-ons can change the estimate range. Anything complex is still confirmed after site inspection.</p>
-        <div class="addon-grid">
-          <label class="addon-card ac-dependent"><input type="checkbox" data-addon="AirTouch 5 smart zoning"><span><b>AirTouch 5 smart zoning</b><small>Smart control, scheduling and a more premium ducted experience.</small></span><em>Popular</em></label>
-          <label class="addon-card ac-dependent"><input type="checkbox" data-addon="Temperature sensors"><span><b>Temperature sensors</b><small>More precise room-by-room temperature monitoring.</small></span><em>Per zone</em></label>
-          <label class="addon-card ac-dependent"><input type="checkbox" data-addon="R1.5 ducting upgrade"><span><b>R1.5 ducting upgrade</b><small>Improved insulation and reduced duct heat gain/loss.</small></span><em>Recommended</em></label>
-          <label class="addon-card energy-dependent"><input type="checkbox" data-addon="Essential circuit backup"><span><b>Essential circuit backup</b><small>Discuss lighting, fridge or selected power circuits during outages.</small></span><em>Confirm</em></label>
-          <label class="addon-card energy-dependent"><input type="checkbox" data-addon="EV charger option"><span><b>EV charger option</b><small>Future-proof the home for electric vehicle charging.</small></span><em>Optional</em></label>
-          <label class="addon-card"><input type="checkbox" data-addon="Switchboard review"><span><b>Switchboard review</b><small>Important for older homes, solar, battery or AC upgrades.</small></span><em>Check</em></label>
-        </div>
-
-        <div class="result-hero" style="margin-top:18px">
-          <div class="estimate-card"><span>Indicative estimate range</span><strong id="resultEstimate">Choose a pathway</strong><p>This is not a final quote. LCMB confirms pricing after site inspection, product selection and formal ServiceM8/GHL quote.</p></div>
-          <div class="score-card"><span class="kicker">Readiness</span><strong id="readinessScore">28%</strong><p style="color:var(--muted);line-height:1.5">Complete the next step and send your summary to LCMB so the team can confirm the right inspection pathway.</p></div>
-        </div>
-        <div class="result-grid">
-          <div class="result-card"><h3>Recommended direction</h3><p id="resultRecommendation">Choose a pathway to generate a recommendation.</p></div>
-          <div class="result-card"><h3>What LCMB will confirm on site</h3><ul id="confirmList"></ul></div>
-        </div>
-        <div class="actions"><button class="btn btn--ghost prev-step" type="button">← Back</button><div class="btn-row"><button class="btn btn--gold next-step" type="button">Continue →</button></div></div>
-      </section>
-
-      <section class="step" data-step="6">
-        <span class="kicker">Almost there</span>
-        <h2>Send the summary to LCMB and request a site inspection.</h2>
-        <p class="step__intro">Your details are used only by LCMB Group to follow up this request.</p>
-        <div class="lead-panel">
-          <h3>Unlock your full estimate summary</h3>
-          <div class="lead-grid">
-            <div class="field"><label for="leadName">Your name</label><input id="leadName" type="text" placeholder="Full name"></div>
-            <div class="field"><label for="leadPhone">Phone</label><input id="leadPhone" type="tel" placeholder="0400 000 000"></div>
-            <div class="field full"><label for="leadEmail">Email</label><input id="leadEmail" type="email" placeholder="you@example.com"></div>
-            <div class="field full"><label for="summaryText">LCMB internal summary</label><textarea id="summaryText" class="summary-text" readonly></textarea></div>
-          </div>
-          <div class="btn-row"><a id="emailSummary" class="btn btn--gold" href="mailto:projects@lcmbelectrical.com.au">Email my selection to LCMB</a><button id="copySummary" type="button" class="btn btn--dark">Copy summary</button></div>
-        </div>
-
-        <h2 style="font-size:40px;margin-top:26px">Who would you like to speak with?</h2>
-        <div class="team-grid">
-          <article class="team-card"><img src="assets/job-photos/solar-battery-van.webp" alt="LCMB solar and battery team"><div><h3>Luke</h3><p>Best for solar, battery and combined ducted + energy packages.</p><a id="bookLuke" class="btn btn--gold" href="mailto:projects@lcmbelectrical.com.au">Request Luke</a></div></article>
-          <article class="team-card"><img src="assets/job-photos/air-conditioning-outdoor.webp" alt="LCMB air conditioning specialist"><div><h3>Ash</h3><p>Best for ducted air conditioning, split systems and comfort upgrades.</p><a id="bookAsh" class="btn btn--gold" href="mailto:office@lcmbelectrical.com.au">Request Ash</a></div></article>
-          <article class="team-card"><img src="assets/job-photos/gold-coast-aerial.webp" alt="LCMB projects team"><div><h3>Projects team</h3><p>Best for builders, commercial, real estate or multi-service scopes.</p><a id="bookProjects" class="btn btn--gold" href="mailto:projects@lcmbelectrical.com.au">Request projects</a></div></article>
-        </div>
-        <div class="actions"><button class="btn btn--ghost prev-step" type="button">← Back</button><div class="btn-row"><a class="btn btn--dark" href="https://g.page/r/CZhaBKS0euEhEAo/review" target="_blank" rel="noopener">Google reviews</a><a class="btn btn--gold" href="quotes/sm8-11863-options-demo.html">View quote demo</a></div></div>
-      </section>
-    </section>
-
-    <aside class="insights" aria-label="Live estimate dashboard">
-      <div class="insight-card"><small>Selected pathway</small><strong id="insightPath">Not selected</strong><p>Choose the service type to personalise the questions and estimate.</p></div>
-      <div class="insight-card"><small>Location</small><strong id="insightSuburb">Not entered</strong><p id="insightHome">3 bed • 2 living • 180 sqm</p></div>
-      <div class="insight-card"><small>Indicative estimate</small><strong id="insightEstimate">Choose a pathway</strong><p>Subject to site inspection and formal quote.</p></div>
-      <div class="insight-card"><small>Package</small><strong id="insightPackage">Recommended</strong><p id="insightBrands">Daikin / Jinko + FoxESS</p></div>
-      <div class="insight-card"><small>Selected add-ons</small><div id="insightTags" class="summary-tags"></div></div>
-      <div class="insight-card proof-only"><small>LCMB proof</small><div class="proof-strip"><img src="assets/job-photos/gold-coast-aerial.webp" alt="Solar roof"><img src="assets/job-photos/battery-install.webp" alt="Battery install"><img src="assets/job-photos/ducted-roof-cavity.webp" alt="Ducted install"></div><p>Photos, reviews and formal proposal pages build trust before the customer accepts.</p></div>
-    </aside>
-  </main>
-
-  <div class="sticky-mobile-estimate"><div><span>Live estimate</span><strong id="stickyEstimate">Choose pathway</strong></div><a href="tel:+61447563718">Call</a></div>
-  <script src="assets/dashboard-v7.js"></script>
-</body>
-</html>
+Home
+3 bed · 2 living
+Package
+Recommended
+Storey
+Single
+Add-ons
+0 selected
+Floor plan
+Not added
+See estimate

@@ -272,22 +272,22 @@
 
   <main id="top" class="shell">
     <section class="hero">
-      <div class="eyebrow">⚡ V8 dashboard experience</div>
-      <h1>Build your LCMB package in minutes.</h1>
+      <div class="eyebrow">LCMB Dashboard Experience</div>
+      <h1>Build your own LCMB Group Package Quote in minutes</h1>
       <p>Choose ducted air, split systems, solar, battery, or a combined package. We’ll guide you through the key questions, show an indicative range, then help you request the right site inspection.</p>
       <div class="hero-grid">
         <span class="trust-chip">Gold Coast & Brisbane</span>
         <span class="trust-chip">10-year workmanship</span>
         <span class="trust-chip">Electrical · AC · Solar · Battery</span>
-        <span class="trust-chip">No final price until LCMB confirms site conditions</span>
+        <span class="trust-chip">Subject to site inspection</span>
       </div>
     </section>
 
     <section class="app">
       <aside class="rail">
-        <span class="version">V8 live dashboard</span>
+        <span class="version">Live Dashboard</span>
         <h3>Your estimate journey</h3>
-        <p class="mini">This screen should look noticeably different from the old form. If you can see this V8 badge, the correct file has loaded.</p>
+        <p class="mini">Follow these easy steps by clicking Next</p>
         <div class="step-list" id="stepList"></div>
       </aside>
 
@@ -304,12 +304,12 @@
           <h2>What would you like help with?</h2>
           <p class="lead">Start with the outcome you want. You can choose a single service or a combined comfort and energy package.</p>
           <div class="grid two" data-group="service">
-            <div class="choice selected" data-value="ducted" onclick="selectChoice('service','ducted')"><div class="icon">❄️</div><h4>Ducted air conditioning</h4><p>Whole-home comfort, zoning and modern controls.</p></div>
-            <div class="choice" data-value="split" onclick="selectChoice('service','split')"><div class="icon">🌬️</div><h4>Split system installation</h4><p>Target bedrooms, offices or living spaces.</p></div>
-            <div class="choice" data-value="solar" onclick="selectChoice('service','solar')"><div class="icon">☀️</div><h4>Solar only</h4><p>Reduce daytime grid usage and electricity bills.</p></div>
-            <div class="choice" data-value="solar_battery" onclick="selectChoice('service','solar_battery')"><div class="icon">🔋</div><h4>Solar + battery</h4><p>Store your solar power and improve self-use.</p></div>
-            <div class="choice" data-value="battery" onclick="selectChoice('service','battery')"><div class="icon">⚡</div><h4>Battery only</h4><p>Add storage or backup to an existing solar system.</p></div>
-            <div class="choice" data-value="combined" onclick="selectChoice('service','combined')"><div class="icon">🏡</div><h4>Ducted + solar + battery</h4><p>Premium comfort and energy package for the whole home.</p><span class="badge" style="margin-top:12px">Popular package</span></div>
+            <div class="choice selected" data-value="ducted" onclick="selectChoice('service','ducted')"><div class="icon">❄️</div><h4>Ducted Air Conditioning</h4><p>Whole-home comfort, zoning and modern controls.</p></div>
+            <div class="choice" data-value="split" onclick="selectChoice('service','split')"><div class="icon">🌬️</div><h4>Split System Installation</h4><p>Target bedrooms, offices or living spaces.</p></div>
+            <div class="choice" data-value="solar" onclick="selectChoice('service','solar')"><div class="icon">☀️</div><h4>Solar System Only</h4><p>Reduce daytime grid usage and electricity bills.</p></div>
+            <div class="choice" data-value="solar_battery" onclick="selectChoice('service','solar_battery')"><div class="icon">🔋</div><h4>Solar System + Battery Storage</h4><p>Store your solar power and improve self-use.</p></div>
+            <div class="choice" data-value="battery" onclick="selectChoice('service','battery')"><div class="icon">⚡</div><h4>Battery Only</h4><p>Add storage or backup to an existing solar system.</p></div>
+            <div class="choice" data-value="combined" onclick="selectChoice('service','combined')"><div class="icon">🏡</div><h4>Ducted + Solar + Battery</h4><p>Premium comfort and energy package for the whole home.</p><span class="badge" style="margin-top:12px">Popular package</span></div>
           </div>
         </div>
 
@@ -376,7 +376,7 @@
           <h2>Your LCMB estimate dashboard.</h2>
           <p class="lead">This is an indicative range only. LCMB will confirm the final design, products and pricing after reviewing the site or floor plan.</p>
           <div class="result-box">
-            <span class="badge" id="resultPath">Ducted air conditioning</span>
+            <span class="badge" id="resultPath">Ducted Air Conditioning</span>
             <div class="price" id="resultPrice">$12,000 – $18,000<small>Indicative estimate inc GST</small></div>
             <div class="summary-list" id="resultSummary"></div>
           </div>
@@ -405,7 +405,7 @@
       </section>
 
       <aside class="estimate-panel">
-        <div class="pathway" id="sidePath">Ducted air conditioning</div>
+        <div class="pathway" id="sidePath">Ducted Air Conditioning</div>
         <div class="live-price" id="sidePrice">$12k – $18k</div>
         <p class="mini">Indicative only. Final quote confirmed after LCMB reviews site conditions, product selection and scope.</p>
         <div class="meter"><div id="readinessMeter"></div></div>
@@ -419,7 +419,7 @@
     </section>
   </main>
 
-  <div class="mobile-price" onclick="goTo(5)"><div><strong id="mobPrice">$12k – $18k</strong><span id="mobPath">Ducted air conditioning · tap to view estimate</span></div><button class="btn primary" style="min-height:44px;padding:0 14px">View</button></div>
+  <div class="mobile-price" onclick="goTo(5)"><div><strong id="mobPrice">$12k – $18k</strong><span id="mobPath">Ducted Air Conditioning · tap to view estimate</span></div><button class="btn primary" style="min-height:44px;padding:0 14px">View</button></div>
 
   <script>
     const steps = ['Pathway','Property','Floor plan','Package','Add-ons','Estimate'];
@@ -429,7 +429,7 @@
       beds:3, baths:2, living:2, sqm:220, floor:'',
       toggles: { openPlan:false, westWindows:false, highCeilings:false, hardAccess:false, airtouch:false, sensors:false, ductUpgrade:false, backup:false, ev:false, switchboard:false }
     };
-    function serviceLabel(s) { return {ducted:'Ducted air conditioning',split:'Split system installation',solar:'Solar only',solar_battery:'Solar + battery',battery:'Battery only',combined:'Ducted + solar + battery'}[s] || s; }
+    function serviceLabel(s) { return {ducted:'Ducted Air Conditioning',split:'Split System Installation',solar:'Solar System Only',solar_battery:'Solar System + Battery Storage',battery:'Battery Only',combined:'Ducted + Solar + Battery'}[s] || s; }
     function init() {
       document.getElementById('stepList').innerHTML = steps.map((s,i)=>`<div class="step-pill ${i===0?'active':''}" data-step-pill="${i}"><b>${i+1}</b><span>${s}</span></div>`).join('');
       updateAll();

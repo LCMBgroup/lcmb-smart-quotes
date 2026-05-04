@@ -1,47 +1,11 @@
-# LCMB Smart Quotes - Professional V6
+# LCMB Smart Quotes - V7 Dashboard Estimator
 
-This repository hosts LCMB Group's customer-facing quote and smart selector pages.
+This repository hosts LCMB Group's interactive smart estimate dashboard and online quote proposal pages.
 
-## Main pages
+Main links:
 
-- `index.html` - homepage for the quote system
-- `smart-selector.html` - interactive customer system selector
-- `quote-generator.html` - manual HTML quote page generator
-- `quotes/sm8-11863-options-demo.html` - example options proposal
+- Smart selector: `/smart-selector.html`
+- Quote generator: `/quote-generator.html`
+- Demo quote: `/quotes/sm8-11863-options-demo.html`
 
-## V6 purpose
-
-V6 adds a modern interactive lead pathway before the formal proposal stage.
-
-Customer journey:
-
-1. Customer chooses ducted, split system, solar, battery or combined package.
-2. Customer answers simple property questions.
-3. Customer selects preferences and upgrades.
-4. Page gives an indicative range and recommended direction.
-5. Customer requests Luke, Ash or Projects team for a site inspection.
-6. LCMB confirms and prepares the official ServiceM8/GHL quote.
-
-## Important
-
-GitHub Pages is public. Do not publish sensitive customer data.
-
-Use:
-
-- first name
-- suburb
-- quote/job number
-- scope
-- public-facing pricing
-
-Do not use:
-
-- full customer address
-- phone/email on public page
-- bank details
-- payment links unless intentional
-- internal notes
-- cost price
-- margin
-
-ServiceM8/GHL remains the official quote, acceptance and payment system.
+V7 focuses on a more professional app-style dashboard experience with live estimate logic, LCMB photos, product preference cards, add-on toggles, floor plan step, summary generation and site inspection requests.
